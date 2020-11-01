@@ -53,7 +53,7 @@ export default function App() {
     <>
       <div id="main">
         <textarea id="task" value={inputBox} onChange={handleInputBoxChange} />
-        <button id="btn" onClick={handleAddTask}>
+        <button id="btn" disabled={!inputBox} onClick={handleAddTask}>
           Add Task
         </button>
         <hr />
