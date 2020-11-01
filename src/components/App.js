@@ -56,22 +56,22 @@ export default function App() {
         <button id="btn" disabled={!inputBox} onClick={handleAddTask}>
           Add Task
         </button>
-        <hr />
-        {toDoList.length === 0 ? (
+        {/* <hr /> */}
+        {/* {toDoList.length === 0 ? (
           <div>No Tasks</div>
-        ) : (
-          <ul>
-            {toDoList.map((task, id) => {
-              return (
-                <li key={id} className="list">
-                  {task.text}
-                  <button onClick={() => handleEdit(id)}>Edit</button>
-                  <button onClick={() => handleDelete(id)}>Delete</button>
-                </li>
-              );
-            })}
-          </ul>
-        )}
+        ) : ( */}
+        <ul>
+          {toDoList.map((task, id) => {
+            return (
+              <li key={id} className="list">
+                {task.text}
+                <button onClick={() => handleEdit(id)}>Edit</button>
+                <button onClick={() => handleDelete(id)}>Delete</button>
+              </li>
+            );
+          })}
+        </ul>
+
         {showEditBox ? (
           <div>
             <textarea value={editBoxText} onChange={handleEditBox} />
