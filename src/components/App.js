@@ -63,11 +63,13 @@ export default function App() {
           <ul>
             {toDoList.map((task, id) => {
               return (
-                <li key={id} className="list">
-                  {task.text}
+                <>
+                  <li key={id} className="list">
+                    {task.text}
+                  </li>
                   <button onClick={() => handleEdit(id)}>Edit</button>
                   <button onClick={() => handleDelete(id)}>Delete</button>
-                </li>
+                </>
               );
             })}
           </ul>
