@@ -80,8 +80,16 @@ export default function App() {
         )}
         {showEditBox ? (
           <div>
-            <textarea value={editBoxText} onChange={handleEditBox} />
-            <button disabled={!editBoxText} onClick={() => saveEdit()}>
+            <textarea
+              className="editTask"
+              value={editBoxText}
+              onChange={handleEditBox}
+            />
+            <button
+              className="saveTask"
+              disabled={!editBoxText}
+              onClick={() => saveEdit()}
+            >
               Save
             </button>
           </div>
